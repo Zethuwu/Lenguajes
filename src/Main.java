@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        String palabra= "0100100101";
+        String palabra= "01001001011";
         int indice = 0;
         int estado  = 0;
         boolean error = false;
