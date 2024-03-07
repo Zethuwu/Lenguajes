@@ -1,0 +1,35 @@
+<ClienteBanco>
+    <Cliente>
+        <num_clte>1</num_clte>
+        <nom_clte>Viego</nom_clte>
+        <tel_clte>5573250923</tel_clte>
+        <direccion>Xochimilco</direccion>
+        <email>ViegpGOD10@gmail.com</email>
+        <huella>Mihuellita1</huella>
+        <sexo>Masculino</sexo>
+        <edad>25</edad>
+        <fecha_alta>09-12-2020</fecha_alta>
+    </Cliente>
+    <Cliente>
+        <num_clte>2</num_clte>
+        <nom_clte>ALejandro</nom_clte>
+        <tel_clte>5572429187</tel_clte>
+        <direccion>Cancun</direccion>
+        <email>al3excen10@gmail.com</email>
+        <huella>Mihuellita2</huella>
+        <sexo>Masculino</sexo>
+        <edad>20</edad>
+        <fecha_alta>29-02-2024</fecha_alta>
+    </Cliente>
+    <Cliente>
+        <num_clte>3</num_clte>
+        <nom_clte>CriCri</nom_clte>
+        <tel_clte>7713456723</tel_clte>
+        <direccion>En la Escuelita</direccion>
+        <email>EsCriCriescricri@gmail.com</email>
+        <huella>Mihuellita3</huella>
+        <sexo>Masculino</sexo>
+        <edad>70</edad>
+        <fecha_alta>12-09-2022</fecha_alta>
+    </Cliente>
+</ClienteBanco>
