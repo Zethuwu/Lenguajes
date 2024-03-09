@@ -17,7 +17,7 @@ public class Herramienta {
     }
     public static boolean especiales(char c){
         boolean especiales = false;
-        if((c >= 1 && c<=47) || (c >= 58 && c<=64) || (c >= 91 && c<=96)){
+        if((c >= 1 && c<=31) || (c >=33 && c<=47) || (c >= 58 && c<=64) || (c >= 91 && c<=96) || (c >= 123 && c<=255)){
             return true;
         }
         return especiales;

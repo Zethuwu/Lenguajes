@@ -8,6 +8,8 @@ import java.util.Arrays;
 
 public class Matriz {
 
+    int Horizontal = 0;
+
     public String[][] llenarMatriz() throws IOException {
         int x = 0,y = 0;
         int estado =0;
@@ -16,7 +18,7 @@ public class Matriz {
         String var10002 = System.getProperty("user.dir");
         File f = new File(var10002 + File.separator + "Matriz");
         if (f.exists()) {
-            System.out.println("Si existe");
+            //System.out.println("Si existe");
             BufferedReader obj = new BufferedReader(new FileReader(f));
             String string;
             BufferedReader obj2 = null;
@@ -27,10 +29,11 @@ public class Matriz {
                 // Aquí puedes procesar la primera línea como lo deseas
                 String[] fragmentos = string2.split(",");
                 for (String fragmento : fragmentos) {
-                    System.out.println(fragmento);
+                   // System.out.println(fragmento);
                 }
                 x = Integer.parseInt(fragmentos[0]);
                 y = Integer.parseInt(fragmentos[1]);
+                Horizontal = Integer.parseInt(fragmentos[1]);
                 // matriz = new int[Integer.parseInt(fragmentos[0])][Integer.parseInt(fragmentos[1])];
             } catch (IOException e) {
                 e.printStackTrace();
@@ -74,7 +77,7 @@ public class Matriz {
                 }
                 indice++;
             }
-            System.out.println(Arrays.deepToString(matriz));
+            //System.out.println(Arrays.deepToString(matriz));
             return matriz;
         }
         return matriz;
