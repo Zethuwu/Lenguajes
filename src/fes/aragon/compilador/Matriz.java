@@ -16,14 +16,14 @@ public class Matriz {
         String[][] matriz = new String[x][y];
 
         String var10002 = System.getProperty("user.dir");
-        File f = new File(var10002 + File.separator + "Matriz");
+        File f = new File(var10002 + File.separator + "MatrizNC");
         if (f.exists()) {
             //System.out.println("Si existe");
             BufferedReader obj = new BufferedReader(new FileReader(f));
             String string;
             BufferedReader obj2 = null;
             try {
-                obj2 = new BufferedReader(new FileReader(var10002 + File.separator + "Matriz"));
+                obj2 = new BufferedReader(new FileReader(var10002 + File.separator + "MatrizNC"));
                 String string2 = obj2.readLine(); // Lee la primera línea del archivo
 
                 // Aquí puedes procesar la primera línea como lo deseas

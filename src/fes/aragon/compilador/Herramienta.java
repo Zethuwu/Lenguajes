@@ -31,5 +31,35 @@ public class Herramienta {
         return fc;
     }
 
+    public static boolean e(char c){
+        boolean fc = false;
+        if(c == 101){
+            return true;
+        }
+        return fc;
+    }
+    public static boolean punto(char c){
+        boolean fc = false;
+        if(c == 46){
+            return true;
+        }
+        return fc;
+    }
+    public static boolean mas(char c){
+        boolean fc = false;
+        if(c == 43){
+            return true;
+        }
+        return fc;
+    }
+
+    public static boolean menos(char c){
+        boolean fc = false;
+        if(c == 45){
+            return true;
+        }
+        return fc;
+    }
+
 
 }

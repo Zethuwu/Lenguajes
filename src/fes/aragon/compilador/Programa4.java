@@ -35,7 +35,6 @@ public class Programa4 {
             char caracter = ' ';
              Programa4 programa4 = new Programa4();
              programa4.siguienteCaracter(cadena.get(i), cadena.get(i).length());
-
         }
 
 
