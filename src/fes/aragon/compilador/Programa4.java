@@ -40,7 +40,7 @@ public class Programa4 {
 
     }
     private void siguienteCaracter(String token, int j) throws IOException {
-        String[][]  mati= matriz.llenarMatriz();
+        String[][]  mati= matriz.llenarMatriz("Matriz");
         Programa4 programa4 = new Programa4();
         for (int i = 0; i < j; i++) {
             char caracter = ' ';

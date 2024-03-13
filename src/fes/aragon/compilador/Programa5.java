@@ -34,30 +34,22 @@ public class Programa5 {
     }
 
     private void siguienteCaracter(String token, int j) throws IOException {
-        String[][]  mati= matriz.llenarMatriz();
+        String[][]  mati= matriz.llenarMatriz("MatrizNC");
         Programa5 programa5 = new Programa5();
         Estado = 0;
         for (int i = 0; i < j; i++) {
             char caracter = ' ';
-            if (i < token.length()) {
+            if (i <= token.length()) {
                 caracter = token.charAt(indice);
+
                 if (Herramienta.numero(caracter)){
-                    if (Estado == 0){
-                        Estado = Integer.parseInt(mati[Estado][0]);
-                    }else if (Estado == 1){
-                        Estado = Integer.parseInt(mati[Estado][0]);
-                    }else if(Estado == 2){
-                        Estado = Integer.parseInt(mati[Estado][0]);
-                    } else if (Estado == 3) {
-                        Estado = Integer.parseInt(mati[Estado][0]);
-                    } else if (Estado == 4) {
-                        Estado = Integer.parseInt(mati[Estado][0]);
-                    } else if (Estado == 5) {
-                        Estado = Integer.parseInt(mati[Estado][0]);
-                    } else if (Estado == 6) {
-                        Estado = Integer.parseInt(mati[Estado][0]);
+                    for (int k = 0; k < 7; k++) {
+                        if (Estado == k){
+                            Estado = Integer.parseInt(mati[Estado][0]);
+                        }
                     }
                 }
+
                 if (Herramienta.punto(caracter)){
                     if (Estado == 1){
                         Estado = Integer.parseInt(mati[Estado][1]);
@@ -87,8 +79,9 @@ public class Programa5 {
                     }
                 }
                 if(Estado == -1){
-                    System.out.println("Estado = -1");
+                    System.out.println("Estado = -1 de: " +token);
                     System.out.println("Caracter no valido o Notacion no Cientifica");
+                    numeracion++;
                     break;
                 }
                 if ( i == token.length()-1) {
@@ -96,10 +89,10 @@ public class Programa5 {
                     String resultado = mati[programa5.Estado][matriz.Horizontal-1];
                     // System.out.println( resultado);
                     if(Objects.equals(resultado, Error)){
-                        System.out.println( numeracion + ": Cadena no valida");
+                        System.out.println( numeracion + ": " + token + " -> Cadena no valida");
                         numeracion++;
                     }else {
-                        System.out.println(numeracion +": Cadena Valida");
+                        System.out.println(numeracion +": " + token +" -> Cadena Valida");
                         numeracion++;
                     }
                 }
