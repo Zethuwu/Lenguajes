@@ -1,5 +1,6 @@
 package fes.aragon.compilador;
 
+import javax.swing.*;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +8,7 @@ import java.util.Objects;
 
 public class Programa5 {
     private  int indice = 0;
-
+    static ArrayList<String> JOpane = new ArrayList<>();
     public static int numeracion = 0;
     static public int Estado = 0;
     public static String Error = "-1";
@@ -31,6 +32,11 @@ public class Programa5 {
             Programa5 programa5 = new Programa5();
             programa5.siguienteCaracter(s, s.length());
         }
+        String message = "";
+        for (String p : JOpane) {
+            message += p +"\n";
+        }
+        JOptionPane.showMessageDialog(null, message);
     }
 
     private void siguienteCaracter(String token, int j) throws IOException {
@@ -80,6 +86,7 @@ public class Programa5 {
                 }
                 if(Estado == -1){
                     System.out.println("Estado = -1 de: " +token);
+                    JOpane.add("Estado = -1 de: " +token);
                     System.out.println("Caracter no valido o Notacion no Cientifica");
                     numeracion++;
                     break;
@@ -90,9 +97,11 @@ public class Programa5 {
                     // System.out.println( resultado);
                     if(Objects.equals(resultado, Error)){
                         System.out.println( numeracion + ": " + token + " -> Cadena no valida");
+                        JOpane.add( numeracion + ": " + token + " -> Cadena no valida");
                         numeracion++;
                     }else {
                         System.out.println(numeracion +": " + token +" -> Cadena Valida");
+                        JOpane.add( numeracion + ": " + token + " -> Cadena valida");
                         numeracion++;
                     }
                 }

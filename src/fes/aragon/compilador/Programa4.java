@@ -13,8 +13,9 @@ import java.util.List;
 import java.util.Objects;
 
 public class Programa4 {
-    private  String token;
     private int indice = 0;
+    static ArrayList<String> JOpane = new ArrayList<>();
+    public static int numeracion = 0;
     public int Estado = 0;
     public static String Error = "-1";
     Matriz matriz = new Matriz();
@@ -31,11 +32,17 @@ public class Programa4 {
                 cadena.add(string);
             }
         }
-        for (int i = 0; i < cadena.size() ; i++) {
+        numeracion = 0;
+        for (String s : cadena) {
             char caracter = ' ';
-             Programa4 programa4 = new Programa4();
-             programa4.siguienteCaracter(cadena.get(i), cadena.get(i).length());
+            Programa4 programa4 = new Programa4();
+            programa4.siguienteCaracter(s, s.length());
         }
+        String message = "";
+        for (String p : JOpane) {
+            message += p +"\n";
+        }
+        JOptionPane.showMessageDialog(null, message);
 
 
     }
@@ -73,8 +80,10 @@ public class Programa4 {
                     Estado = Integer.parseInt(Error);
                 }
                 if(Estado == -1){
-                    System.out.println("Estado = -1");
+                    System.out.println("Estado = -1" +token);
                     System.out.println("Caracter no valido");
+                    JOpane.add("Estado = -1 de: " +token);
+                    numeracion++;
                     break;
                 }
                 if ( i == token.length()-1) {
@@ -82,9 +91,13 @@ public class Programa4 {
                     String resultado = mati[programa4.Estado][matriz.Horizontal-1];
                    // System.out.println( resultado);
                     if(Objects.equals(resultado, Error)){
-                        System.out.println("Cadena no valida");
+                        System.out.println(numeracion + ": " + token + " -> Cadena no valida");
+                        JOpane.add( numeracion + ": " + token + " -> Cadena no valida");
+                        numeracion++;
                     }else {
-                        System.out.println("Cadena Valida");
+                        System.out.println(numeracion +": " + token +" -> Cadena Valida");
+                        JOpane.add( numeracion + ": " + token + " -> Cadena valida");
+                        numeracion++;
                     }
                 }
                 indice++;
